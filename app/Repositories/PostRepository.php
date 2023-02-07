@@ -57,7 +57,7 @@ class PostRepository implements PostInterface
 
     public function restoreAll()
     {
-        return  Post::onlyTrashed()->restore();
+        return   Post::onlyTrashed()->restore();
     }
 
     public function restore($id)

@@ -95,9 +95,9 @@ class PostController extends Controller
     public function update(UpdatePostRequest $request, $id)
     {
 
-        if ($request->has('submit')) {
+        if ($request->has('submit') ) {
 
-            $post = $this->service->updatePost($request, $id);
+            $post = $this->service->updatePost($request,  $id);
         }
        
         return redirect()->route('home')->with('success',"Post ".$post->title." edit successflay!");
